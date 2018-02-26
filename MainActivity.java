@@ -9,6 +9,7 @@ public class MainActivity extends AppCompatActivity {
 
     int scoreTeamA = 0;
     int scoreTeamB = 0;
+    int resetPoints = 0;
 
 
     @Override
@@ -88,6 +89,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void addOneToB(View view) {
         scoreTeamB = scoreTeamB + 1;
+        displayForTeamB(scoreTeamB);
+    }
+
+    /************
+     * POINTS This will reset points to 0 for both teams.
+     ************/
+
+    public void resetScore(View view) {
+        scoreTeamA = 0;
+        scoreTeamB = 0;
+        displayForTeamA(scoreTeamA);
         displayForTeamB(scoreTeamB);
     }
 }
